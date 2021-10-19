@@ -17,4 +17,14 @@ describe("normalToRoman testing suite", () => {
         const romanNumber = "";
         expect(normalToRoman(normalNumber)).toBe(romanNumber);
     })
+    test("conversion with one roman digit per position", () => {
+        const normalNumber = 5;
+        const romanNumber = "V";
+        expect(normalToRoman(normalNumber)).toBe(romanNumber);
+    })
+    test("conversion with multiple roman digits per position", () => {
+        const normalNumber = 8;
+        const romanNumber = "VIII";
+        expect(normalToRoman(normalNumber)).toBe(romanNumber);
+    })
 })
