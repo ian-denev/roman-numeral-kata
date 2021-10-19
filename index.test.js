@@ -37,4 +37,11 @@ describe("normalToRoman testing suite", () => {
         const romanNumber = "IX";
         expect(normalToRoman(normalNumber)).toBe(romanNumber);
     })
+    test("conversion with multiple positions", () => {
+        const normalNumber = 96;
+        const romanNumberCorrect = "XCVI";
+        const romanNumberWrong = "IXVI";
+        expect(normalToRoman(normalNumber)).toBe(romanNumberCorrect);
+        expect(normalToRoman(normalNumber)).toNotBe(romanNumberWrong);
+    })
 })
