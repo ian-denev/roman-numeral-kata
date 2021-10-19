@@ -3,6 +3,7 @@ const normalToRoman = number => {
     else if (typeof number != "number") throw new Error("argument must be a Number");
 
     const normalToRomanConversion = {
+        0: '',
         1: 'I',
         5: 'V',
         10: 'X',
@@ -11,7 +12,7 @@ const normalToRoman = number => {
         500: 'D',
         1000: 'M'
     }
-    
+
     return normalToRomanConversion[number];
 }
 

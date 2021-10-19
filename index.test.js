@@ -12,4 +12,9 @@ describe("normalToRoman testing suite", () => {
         const romanNumber = "L";
         expect(normalToRoman(normalNumber)).toBe(romanNumber);
     })
+    test("zero conversion", () => {
+        const normalNumber = 0;
+        const romanNumber = "";
+        expect(normalToRoman(normalNumber)).toBe(romanNumber);
+    })
 })
