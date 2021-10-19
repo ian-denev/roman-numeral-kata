@@ -36,8 +36,26 @@ const normalToRoman = normalNumber => {
     return result.flat().join("");
 }
 
-const romanToNormal = number => {
+const romanToNormal = romanNumber => {
+    if (romanNumber == undefined) throw new Error("an argument is required");
+    else if (typeof romanNumber != "string") throw new Error("argument must be a String");
 
+    const romanToNormalConversion = {
+        'I': 1,
+        'V': 5,
+        'X': 10,
+        'L': 50,
+        'C': 100,
+        'D': 500,
+        'M': 1000
+    }
+
+    const convertedRomanDigits = [...romanNumber].reverse().map(el => romanToNormalConversion[el]);
+
+    return convertedRomanDigits.reduce((total, curr, index) => {
+        if (curr < convertedRomanDigits[index - 1]) return total - curr;
+        return total + curr;
+    }, 0);
 }
 
 module.exports = { normalToRoman, romanToNormal }
