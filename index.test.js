@@ -7,4 +7,9 @@ describe("normalToRoman testing suite", () => {
     test("argument is a Number", () => {
         expect(() => normalToRoman("str")).toThrow("argument must be a Number");
     })
+    test("simple / hardcoded conversion", () => {
+        const normalNumber = 50;
+        const romanNumber = "L";
+        expect(normalToRoman(normalNumber)).toBe(romanNumber);
+    })
 })
