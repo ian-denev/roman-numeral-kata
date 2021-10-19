@@ -1,1 +1,1 @@
-const {normalToRoman, romanToNormal} = require("./index");
+const { normalToRoman, romanToNormal } = require("./index");

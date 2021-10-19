@@ -6,4 +6,4 @@ const romanToNormal = number => {
 
 }
 
-module.exports = {normalToRoman, romanToNormal}
+module.exports = { normalToRoman, romanToNormal }
