@@ -27,4 +27,14 @@ describe("normalToRoman testing suite", () => {
         const romanNumber = "VIII";
         expect(normalToRoman(normalNumber)).toBe(romanNumber);
     })
+    test("conversion when every roman digit is followed by smaller or same", () => {
+        const normalNumber = 17;
+        const romanNumber = "XVII";
+        expect(normalToRoman(normalNumber)).toBe(romanNumber);
+    })
+    test("conversion when some roman digits are followed by bigger", () => {
+        const normalNumber = 9;
+        const romanNumber = "IX";
+        expect(normalToRoman(normalNumber)).toBe(romanNumber);
+    })
 })
