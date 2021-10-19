@@ -44,6 +44,16 @@ describe("normalToRoman testing suite", () => {
         expect(normalToRoman(normalNumber)).toBe(romanNumberCorrect);
         expect(normalToRoman(normalNumber)).not.toBe(romanNumberWrong);
     })
+    test("combined test - large number 1", () => {
+        const normalNumber = 2987;
+        const romanNumber = "MMCMLXXXVII";
+        expect(normalToRoman(normalNumber)).toBe(romanNumber);
+    })
+    test("combined test - large number 2", () => {
+        const normalNumber = 1799;
+        const romanNumber = "MDCCXCIX";
+        expect(normalToRoman(normalNumber)).toBe(romanNumber);
+    })
 })
 
 describe("romanToNormal testing suite", () => {
@@ -89,5 +99,15 @@ describe("romanToNormal testing suite", () => {
         const romanNumberWrong = "IXVI";
         expect(romanToNormal(romanNumberCorrect)).toBe(normalNumber);
         expect(romanToNormal(romanNumberWrong)).not.toBe(normalNumber);
+    })
+    test("combined test - large number 1", () => {
+        const normalNumber = 2987;
+        const romanNumber = "MMCMLXXXVII";
+        expect(romanToNormal(romanNumber)).toBe(normalNumber);
+    })
+    test("combined test - large number 2", () => {
+        const normalNumber = 1799;
+        const romanNumber = "MDCCXCIX";
+        expect(romanToNormal(romanNumber)).toBe(normalNumber);
     })
 })
