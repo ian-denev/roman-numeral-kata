@@ -42,6 +42,6 @@ describe("normalToRoman testing suite", () => {
         const romanNumberCorrect = "XCVI";
         const romanNumberWrong = "IXVI";
         expect(normalToRoman(normalNumber)).toBe(romanNumberCorrect);
-        expect(normalToRoman(normalNumber)).toNotBe(romanNumberWrong);
+        expect(normalToRoman(normalNumber)).not.toBe(romanNumberWrong);
     })
 })
